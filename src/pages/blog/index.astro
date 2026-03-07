@@ -47,7 +47,7 @@ const posts = (await getCollection('blog')).sort(
           {
             posts.map((post) => (
               <li class="paper padding-small" style="width: 100%; max-width: 420px;">
-                <a href={`/blog/${post.id}/`} class="no-decoration">
+                <a href={`${import.meta.env.BASE_URL}/blog/${post.id}/`} class="no-decoration">
                   {post.data.heroImage && (
                     <Image
                       width={720}
