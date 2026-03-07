@@ -1,0 +1,114 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`${SITE_TITLE} – Contact`} description={SITE_DESCRIPTION} />
+  </head>
+
+  <body>
+    <Header />
+
+    <!-- 
+      ============================
+      FABFORM.IO INTEGRATION NOTES
+      ============================
+
+      Replace YOUR-ENDPOINT-ID-HERE with your Fabform endpoint.
+      Example: https://fabform.io/f/abc123
+
+      Do NOT remove name="" attributes — Fabform needs them.
+      Do NOT expose API keys — Fabform does not require any.
+    -->
+
+    <main class="container padding-large">
+
+      <div class="paper padding-large">
+
+        <h1 class="text-center">
+          <span class="inline-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="16" rx="2" ry="2" />
+              <line x1="7" y1="8" x2="17" y2="8" />
+            </svg>
+          </span>
+          Contact
+        </h1>
+
+        <p class="text-center">
+          Use the form below to send a message.  
+          This form is styled with PaperCSS and securely processed by Fabform.io.
+        </p>
+
+        <form 
+          action="https://fabform.io/f/YOUR-ENDPOINT-ID-HERE"
+          method="POST"
+          class="margin-top-large"
+        >
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input class="input-block" type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input class="input-block" type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" class="input-block">
+              <option value="general">General Message</option>
+              <option value="feedback">Feedback</option>
+              <option value="support">Support Request</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea class="input-block no-resize" id="message" name="message" rows="6" required></textarea>
+          </div>
+
+          <fieldset class="form-group">
+            <legend>Stay Updated</legend>
+
+            <label class="paper-check" for="newsletter">
+              <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+              <span>Subscribe to updates</span>
+            </label>
+          </fieldset>
+
+          <button type="submit" class="paper-btn btn-primary btn-block margin-top">
+            Send Message
+          </button>
+
+        </form>
+
+        <div class="text-center margin-top-large">
+          <a href="https://fabform.io" target="_blank" class="badge secondary">
+            Powered by Fabform.io
+          </a>
+        </div>
+
+      </div>
+
+    </main>
+
+    <Footer />
+
+    <style>
+      .inline-icon {
+        display: inline-flex;
+        vertical-align: middle;
+        margin-right: 0.35rem;
+      }
+    </style>
+  </body>
+</html>
+

@@ -1,0 +1,21 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header class="paper">
+  <div class="container">
+    <nav class="padding-small flex align-center space-between">
+
+      <!-- Navigation Links -->
+      <div class="flex gap-small">
+        <HeaderLink href="/" class="paper-btn btn-small">{SITE_TITLE}</HeaderLink>
+        <HeaderLink href="/blog" class="paper-btn btn-small">Blog</HeaderLink>
+        <HeaderLink href="/about" class="paper-btn btn-small">About</HeaderLink>
+        <HeaderLink href="/contact" class="paper-btn btn-small">Contact</HeaderLink>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
