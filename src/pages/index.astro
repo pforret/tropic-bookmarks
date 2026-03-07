@@ -66,7 +66,6 @@ const posts = (await getCollection('blog'))
             )}
             <h4>{post.data.title}</h4>
             <p class="italic"><FormattedDate date={post.data.pubDate} /></p>
-            {post.data.description && <p class="text-muted">{post.data.description}</p>}
           </a>
         ))}
       </section>
