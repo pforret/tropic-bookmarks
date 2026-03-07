@@ -32,15 +32,8 @@ const posts = (await getCollection('blog')).sort(
             <line x1="7" y1="16" x2="13" y2="16" />
           </svg>
         </span>
-        The Papery Blog Roll
+        Bookmarks
       </h1>
-
-      <p class="paper text-center">
-        Welcome to the official archive of all things scribbled, doodled, typed,
-        or accidentally published. Each post below has been lovingly handcrafted
-        using Astro and PaperCSS, then pinned to this digital bulletin board for
-        your reading pleasure.
-      </p>
 
       <section class="margin-top-large">
         <ul class="flex flex-wrap gap-large no-bullet justify-center">
@@ -69,15 +62,6 @@ const posts = (await getCollection('blog')).sort(
           }
         </ul>
       </section>
-
-      <p class="paper text-center margin-top-large">
-        <span class="inline-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 19h14M5 5h14M5 12h8" />
-          </svg>
-        </span>
-        That’s all for now. More papery posts are already scribbled in the margins.
-      </p>
 
     </main>
 
