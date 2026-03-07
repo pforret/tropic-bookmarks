@@ -4,7 +4,7 @@ description: "```json
 {\"short\": \"6-part Claude Cowork prompt system for local SEO: competitor review analysis, gap finding, and execution planning in spre"
 pubDate: "2026-03-07T22:49:30.207Z"
 url: "https://x.com/bloggersarvesh/status/2030272903670018172?s=12&t=yTegxTunk8uX6haHnJcf7g"
-heroImage: "./1772923761916.jpg:"
+heroImage: "/bookmarks/1772923761916.jpg"
 ---
 
 ```json
